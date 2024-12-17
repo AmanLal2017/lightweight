@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
 const Footer = () => {
@@ -12,8 +13,8 @@ const Footer = () => {
         <div>
           <p className='text-xl font-medium mb-2'>company</p>
           <ul className='flex flex-col gap-1 text-gray-600'>
-            <li>home</li>
-            <li>about us</li>
+            <Link to='/' onClick={() => window.scrollTo(0, 0)}><li>home</li></Link>
+            <Link to='/about' onClick={() => window.scrollTo(0, 0)}><li>about us</li></Link>
             <li>delivery</li>
             <li>privacy policy</li>
           </ul>
@@ -22,8 +23,12 @@ const Footer = () => {
         <div>
           <p className='text-xl font-medium mb-2'>get in touch!</p>
           <ul className='flex flex-col gap-1 text-gray-600'>
-            <li>+1-916-123-4567</li>
-            <li>Admin@lightweight.com</li>
+            <a href="tel:19161234567">
+              <li>+1-916-123-4567</li>
+            </a>
+            <a href="mailto:Admin@lightweight.com">
+              <li>Admin@lightweight.com</li>
+            </a>
           </ul>
         </div>
         
